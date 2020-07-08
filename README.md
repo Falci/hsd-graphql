@@ -2,6 +2,9 @@
 
 This is a graphql plugin for [Handshake Daemon](https://github.com/handshake-org/hsd).
 
+This is just a proof of concept. Only `block(height)` method is currently implemented.
+Let me know if you think this project deserves more attention.
+
 ## Usage:
 
 In your HSD directory:

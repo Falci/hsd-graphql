@@ -1,6 +1,6 @@
 {
   "name": "hsd-graphql",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Graphql Plugin for HSD",
   "main": "src/index.js",
   "keywords": [
@@ -12,6 +12,13 @@
   ],
   "author": "Fernando Falci <hns.graphql@falci.me>",
   "license": "MIT",
+  "bugs": {
+    "web": "https://github.com/Falci/hsd-graphql/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Falci/hsd-graphql.git"
+  },
   "dependencies": {
     "apollo-server": "^2.15.1",
     "auto-load": "^3.0.4",
