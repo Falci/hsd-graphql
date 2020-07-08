@@ -1,9 +1,23 @@
 type Query {
+  blocks(offset: Int = 0, limit: Int = 25): BlockNode
   block(height: Int!): Block
 }
 
+type PageInfo {
+  hasNext: Boolean!
+  hasPrevious: Boolean!
+  next: Int
+  previous: Int
+  total: Int!
+}
+
+type BlockNode {
+  pageInfo: PageInfo!
+  nodes: [Block]!
+}
+
 type PrevOut {
-  # hash: String!
+  hash: String!
   index: Int!
 }
 
@@ -66,4 +80,9 @@ type Block {
   extraNonce: String!
   mask: String!
   txs: [TX]
+}
+
+type TxNode {
+  pageInfo: PageInfo!
+  nodes: [TX]
 }
