@@ -1,0 +1,69 @@
+type Query {
+  block(height: Int!): Block
+}
+
+type PrevOut {
+  # hash: String!
+  index: Int!
+}
+
+type Covenant {
+  type: Int!
+  action: String!
+  items: [String]
+}
+
+type Coin {
+  version: Int!
+  height: Int!
+  value: Float!
+  address: String!
+  covenant: Covenant
+  coinbase: Boolean
+}
+
+type Input {
+  prevout: PrevOut!
+  witness: [String]
+  sequence: Int!
+  address: String
+  coin: Coin
+}
+
+type Output {
+  value: Float
+  address: String
+  covenant: Covenant
+}
+
+type TX {
+  hash: String!
+  witnessHash: String!
+  fee: Int!
+  rate: Int!
+  mtime: Int!
+  index: Int!
+  version: Int!
+  inputs: [Input]
+  outputs: [Output]
+  locktime: Int!
+  hex: String!
+}
+
+type Block {
+  hash: String!
+  height: Int!
+  depth: Int!
+  version: Int!
+  prevBlock: String!
+  merkleRoot: String!
+  witnessRoot: String!
+  treeRoot: String!
+  reservedRoot: String!
+  time: Int!
+  bits: Int!
+  nonce: Int!
+  extraNonce: String!
+  mask: String!
+  txs: [TX]
+}

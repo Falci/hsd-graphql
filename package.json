@@ -1,0 +1,21 @@
+{
+  "name": "hsd-graphql",
+  "version": "0.0.1",
+  "description": "Graphql Plugin for HSD",
+  "main": "src/index.js",
+  "keywords": [
+    "handshake",
+    "handshake.org",
+    "hsn",
+    "hsd",
+    "graphql"
+  ],
+  "author": "Fernando Falci <hns.graphql@falci.me>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.15.1",
+    "auto-load": "^3.0.4",
+    "bval": "^0.1.6",
+    "graphql": "^15.3.0"
+  }
+}
